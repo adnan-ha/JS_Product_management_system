@@ -1,0 +1,139 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #cbcbcb;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.container .head {
+  color: #111;
+  text-transform: uppercase;
+}
+
+.container .head h2 {
+  margin-bottom: 5px;
+}
+
+.container input {
+  width: 100%;
+  background-color: #2a6678;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 5px;
+  margin: 5px 0;
+  color: white;
+  caret-color: white;
+  transition: 0.3s;
+}
+
+.container input::placeholder {
+  color: white;
+}
+
+.container input:focus {
+  transform: scale(1.1);
+  background-color: #1a3f4b;
+}
+
+.container .inputs .total-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .inputs .total-inputs input {
+  flex-basis: 21%;
+}
+
+.container .inputs .total-inputs small {
+  background-color: rgb(143, 4, 4);
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.container .inputs .total-inputs small::before {
+  content: "total: ";
+}
+
+.container button:not(#themeBtn) {
+  width: 100%;
+  background-color: rgb(0 56 88);
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:not(#themeBtn):hover {
+  background-color: rgb(0 84 133);
+  letter-spacing: 1px;
+}
+
+.container .outputs .search-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .outputs .search-btns button {
+  flex-basis: 45%;
+}
+
+#deleteAll {
+  margin-top: 15px;
+}
+
+.container table {
+  width: 100%;
+  color: black;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.container table thead {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container table td {
+  padding: 5px 0;
+  border-top: 1px solid rgb(97, 97, 97);
+}
+
+.container #themeBtn {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding: 10px;
+  background-color: #135a40;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container #themeBtn:hover {
+  background-color: #20976c;
+  letter-spacing: 1px;
+}

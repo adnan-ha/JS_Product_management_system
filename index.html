@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/master.css" id="css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="changeTheme()">
+    <div class="container">
+      <button id="themeBtn" onclick="changeTheme()">Light Theme</button>
+      <div class="head">
+        <h2>CRUDS</h2>
+        <p>Create Read Update Delete Search</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title" />
+        <div class="total-inputs">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="price"
+            id="price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="taxes"
+            id="taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="ads"
+            id="ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            placeholder="discount"
+            id="discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" placeholder="count" id="count" />
+        <input type="text" placeholder="category" id="category" />
+        <button id="createBtn">Create</button>
+      </div>
+      <div class="outputs">
+        <input
+          onkeyup="searchData()"
+          type="text"
+          placeholder="search"
+          id="search"
+        />
+        <div class="search-btns">
+          <button onclick="getSearchMode(this.id)" id="byTitle">
+            Search By Title
+          </button>
+          <button onclick="getSearchMode(this.id)" id="byCategory">
+            Search By category
+          </button>
+        </div>
+      </div>
+      <div id="deleteAll"></div>
+      <table>
+        <thead>
+          <td>ID</td>
+          <td>Title</td>
+          <td>Price</td>
+          <td>Taxes</td>
+          <td>ADS</td>
+          <td>discount</td>
+          <td>Total</td>
+          <td>category</td>
+          <td>Update</td>
+          <td>Delete</td>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
